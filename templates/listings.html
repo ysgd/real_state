@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    {% for listing in listings %}
-    <a href="/listings/{{listing.id}}/">{{listing.title}}</a>
-    {% endfor %}
-  </body>
-</html>
+{% extends "base.html" %} {% block content %} {% for listing in listings %}
+<a href="/listings/{{listing.id}}/" class="px-3 py-2 bg-gray-100 rounded-sm"
+  >{{listing.title}}</a
+>
+{% endfor %} {% endblock content %}
