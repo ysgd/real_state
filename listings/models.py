@@ -9,7 +9,7 @@ class Listing(models.Model):
   sq_ft = models.IntegerField()
   address = models.CharField(max_length=150)
   description = models.TextField()
-  # image = models.ImageField()
+  image = models.ImageField()
   
   def __str__(self):
     return self.title
